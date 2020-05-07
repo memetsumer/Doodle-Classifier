@@ -8,6 +8,7 @@ class DoodleClassifier:
         self.length = 2000
 
         # Loading datasets
+        # Dataset names are just samples. In order to use different datasets, refactor names of .npy files and variables.
         self.icecream_dataset = np.load('full_numpy_bitmap_ice_cream.npy')[:self.length]
         self.cat_dataset = np.load('full_numpy_bitmap_cat.npy')[:self.length]
         self.eiffel_dataset = np.load('full_numpy_bitmap_The_Eiffel_Tower.npy')[:self.length]
