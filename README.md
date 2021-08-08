@@ -1,5 +1,5 @@
 # Simple-Doodle-Classifier
-Predicting doodles using Python, Flask, p5.js
+Classify doodles using Python, Flask, p5.js
 
 
 * To run code, you should download at least 3 dataset from [doodle datasets](https://github.com/googlecreativelab/quickdraw-dataset "quickdraw-dataset"), In this project, _numpy bitmap files (.npy)_ are used to work easily with Python.
