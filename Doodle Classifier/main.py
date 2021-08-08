@@ -11,20 +11,22 @@ assets = Environment(app)
 
 assets.register('main_js', js)
 
+dc = DoodleClassifier()
+
 
 @app.route('/', methods=["GET", "POST"])
 def index():
     if request.method == 'GET':
+        dc.train()
         return render_template("index.html")
     if request.method == 'POST':
-        dc = DoodleClassifier()
         data = request.json
         vectorized_inputs = np.array(data).reshape((-1, 1))
         guess = np.argmax(dc.predict_doodle(vectorized_inputs))
         if guess == 0:
             guess = "It's an ice cream!"
         elif guess == 1:
-            guess = "It's a kitty cat!"
+            guess = "It's a basketball!!"
         elif guess == 2:
             guess = "It looks like the Eiffel Tower!"
         response = {'answer': guess}
